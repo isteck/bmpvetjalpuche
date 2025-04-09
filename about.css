@@ -1,0 +1,362 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    font-family: 'Times New Roman', serif;
+    scroll-behavior: smooth;
+    background-color: #9ccfff;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background: black;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo a {
+    color: #0077CC;
+    font-size: 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.logo a:hover {
+    color: #66A3A3;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+    font-size: 18px;
+}
+
+.menu ul li a:hover {
+    color: #66A3A3;
+}
+
+/* Mobile Menu */
+#menu-toggle {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+#close-menu {
+    display: none;
+    font-size: 26px;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+@media (max-width: 768px) {
+    #menu-toggle {
+        display: block;
+    }
+
+    .menu {
+        position: fixed;
+        top: 0;
+        right: -250px;
+        width: 250px;
+        height: 100vh;
+        background: #2c4e4e;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 60px;
+        transition: right 0.5s ease-in-out;
+        z-index: 1000;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu ul li {
+        width: 100%;
+        padding: 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .menu ul li a {
+        font-size: 22px;
+        text-align: left;
+    }
+
+    #close-menu {
+        display: block;
+    }
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.4);
+}
+
+/* Title and Button */
+.hero-overlay {
+    font-family: 'Times New Roman', serif;
+    width: 100%;
+    position: absolute;
+    color: rgb(255, 255, 255);
+    top: 45%;
+    transform: translateY(-10%);
+    text-align: center;
+}
+
+button {
+    width: 170px;
+    padding: 15px;
+    margin: 20px 5px;
+    text-align: center;
+    border-radius: 25px;
+    color: black;
+    border: 2px solid;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+button:hover {
+    background: #66A3A3;
+}
+
+/* Section Styles */
+main {
+    padding-top: 6%;
+}
+
+main section {
+    width: 90%;
+    margin: 90px auto;
+    background-color: #d3d3d349;
+    border-radius: 10px;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 60px;
+    transition: background-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+main section:hover {
+    background-color: #0077cc18;
+    box-shadow: 0 4px 10px rgba(14, 7, 1, 0.3);
+}
+
+section h1,
+section h2 {
+    font-size: 2rem;
+    color: #1ec218;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 20px;
+    color: black;
+    line-height: 1.6;
+    font-family: 'Times New Roman', serif;
+}
+
+/* Team Section */
+.team {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    gap: 30px;
+}
+
+.team-member {
+    text-align: center;
+    flex-basis: 30%;
+    margin-bottom: 50px;
+}
+
+.team-member img {
+    width: 50%;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.team-member h3 {
+    font-family: 'Times New Roman', serif;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.team-member p {
+    font-size: 1rem;
+    color: #777;
+}
+
+/* Footer */
+footer {
+    font-family: 'Times New Roman', serif;
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Desktop and Large Screens */
+@media screen and (min-width: 1024px) {
+    .hero-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 80vh;
+        position: relative;
+    }
+
+    .hero-overlay {
+        color: white;
+        padding: 30px 50px;
+        text-align: center;
+        border-radius: 10px;
+    }
+
+    .hero-overlay h1 {
+        font-size: 4rem;
+        color: white;
+    }
+}
+
+/* Tablet View */
+@media screen and (max-width: 992px) {
+    .hero-section {
+        height: 60vh;
+    }
+
+    .hero-overlay {
+        width: 80%;
+        padding: 20px;
+    }
+
+    .hero-overlay h1 {
+        text-align: center;
+        font-size: 7rem;
+        color: white;
+    }
+}
+
+/* Mobile View */
+@media screen and (max-width: 768px) {
+    .hero-section {
+        height: 98vh;
+    }
+
+    .hero-overlay {
+        width: 90%;
+        padding: 15px;
+        padding-left: 10%;
+    }
+
+    .hero-overlay h1 {
+        font-size: 4.4rem;
+        
+    }
+
+    .team {
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin-top: 100px;
+        gap: 30px;
+    }
+
+    .team-member {
+        flex-basis: 90%;
+        margin-bottom: 50px;
+    }
+
+    .team-member img {
+        width: 70%;
+        border-radius: 50%;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+}
+
+/* video section */
+
+.video-section {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-bottom: 9%;
+    padding-top: 4%;
+}
+
+.video-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.video-description {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 50px;
+}
+
+.video-container {
+    max-width: 800px;
+    aspect-ratio: 16 / 9;
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+}
+
+@media screen and (max-width: 768px) {
+    .video-container {
+        max-width: 90%;
+    }
+}
+
