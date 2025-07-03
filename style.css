@@ -152,11 +152,11 @@ html, body {
 
 .content p {
     font-size: 17px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     font-family: Arial;
     letter-spacing: 1.2px;
     line-height: 30px;
-    color: #9a9c9e;
+    color: white;
     font-weight: bold;
 }
 
